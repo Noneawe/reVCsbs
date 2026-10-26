@@ -1,0 +1,12 @@
+diff --git a/src/gl/gl3device.cpp b/src/gl/gl3device.cpp
+index 6a4c8dd..0ad23ab 100644
+--- a/src/gl/gl3device.cpp
++++ b/src/gl/gl3device.cpp
+@@ -1435,6 +1435,7 @@ rasterRenderFast(Raster *raster, int32 x, int32 y)
+ 	case Raster::CAMERATEXTURE:
+ 		switch(src->type){
+ 		case Raster::CAMERA:
++		case Raster::CAMERATEXTURE:	// camera drawing into an FBO (VR); copies from the bound framebuffer too
+ 			setActiveTexture(0);
+ 			glBindTexture(GL_TEXTURE_2D, natdst->texid);
+ 			glCopyTexSubImage2D(GL_TEXTURE_2D, 0, x, (dst->height-src->height)-y,

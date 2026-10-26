@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" font-family="sans-serif" font-size="14">
+  <style>
+    .box{fill:#161d2b;stroke:#FF4FA3;stroke-width:2;rx:10}
+    .t{fill:#e8eefc}
+    .s{fill:#9fb0d0;font-size:12px}
+    .ar{stroke:#FF4FA3;stroke-width:2;fill:none;marker-end:url(#a)}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#FF4FA3"/></marker></defs>
+  <rect width="900" height="330" fill="#0b0f1a"/>
+  <rect class="box" x="20" y="30" width="230" height="70"/>
+  <text class="t" x="35" y="58">Pass 1: left eye</text>
+  <text class="s" x="35" y="80">camera shifted -E(1-1/C), off-axis</text>
+  <rect class="box" x="20" y="150" width="230" height="70"/>
+  <text class="t" x="35" y="178">Pass 2: right eye</text>
+  <text class="s" x="35" y="200">camera shifted +E(1-1/C), same lists</text>
+  <rect class="box" x="320" y="30" width="190" height="70"/>
+  <text class="t" x="335" y="58">Eye texture L (FBO)</text>
+  <text class="s" x="335" y="80">one eye wide, x render scale</text>
+  <rect class="box" x="320" y="150" width="190" height="70"/>
+  <text class="t" x="335" y="178">Eye texture R (FBO)</text>
+  <text class="s" x="335" y="200">HUD and menus in both</text>
+  <rect class="box" x="580" y="75" width="300" height="100"/>
+  <text class="t" x="595" y="105">VR_Present(): 32x32 lens mesh</text>
+  <text class="s" x="595" y="128">barrel pre-distortion f(r) = 1 + k1 r^2 + k2 r^4</text>
+  <text class="s" x="595" y="148">shift toward the centre, margin, one buffer swap</text>
+  <path class="ar" d="M250,65 L318,65"/><path class="ar" d="M250,185 L318,185"/>
+  <path class="ar" d="M510,65 L578,110"/><path class="ar" d="M510,185 L578,140"/>
+  <rect class="box" x="580" y="230" width="300" height="70"/>
+  <text class="t" x="595" y="258">Display (landscape)</text>
+  <text class="s" x="595" y="280">left half = left eye, right half = right eye</text>
+  <path class="ar" d="M730,175 L730,228"/>
+  <text class="s" x="20" y="300">Head tracking (optional) only rotates the render camera; the game camera, aiming and walking are untouched.</text>
+</svg>
